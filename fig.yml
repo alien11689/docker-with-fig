@@ -18,3 +18,13 @@ groovy:
     volumes:
     - .:/project
     command: bash -c groovysh
+python27:
+    build: python2.7
+    volumes:
+    - .:/project
+    command: bash -c python2.7
+python34:
+    build: python3.4
+    volumes:
+    - .:/project
+    command: bash -c python3.4

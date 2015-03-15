@@ -13,3 +13,8 @@ scala:
     volumes:
     - .:/project
     command: bash -c scala
+groovy:
+    build: groovy
+    volumes:
+    - .:/project
+    command: bash -c groovysh

@@ -28,3 +28,8 @@ python34:
     volumes:
     - .:/project
     command: bash -c python3.4
+clojure:
+    build: clojure
+    volumes:
+    - .:/project
+    command: lein repl

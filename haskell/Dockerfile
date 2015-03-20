@@ -10,6 +10,6 @@ VOLUME /project
 
 WORKDIR /project
 
-RUN apt-get install -y haskell-platform
+RUN apt-get install -y haskell-platform hlint
 
 CMD bash -c ghci

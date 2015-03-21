@@ -3,11 +3,6 @@ haskell:
     volumes:
     - .:/project
     command: bash -c ghci
-cabal:
-    build: haskell
-    volumes:
-    - .:/project
-    command: bash
 scala:
     build: scala
     volumes:

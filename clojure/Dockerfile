@@ -4,11 +4,9 @@ MAINTAINER alien11689@gmail.com
 
 RUN apt-get update
 
-RUN apt-get upgrade -y 
+RUN apt-get upgrade -y
 
-VOLUME /project
-
-RUN apt-get install -y wget python-software-properties software-properties-common
+RUN apt-get install -y wget python-software-properties software-properties-common unzip
 
 RUN \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
@@ -19,6 +17,8 @@ RUN \
   rm -rf /var/cache/oracle-jdk8-installer
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+VOLUME /project
 
 RUN wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -O /bin/lein
 
